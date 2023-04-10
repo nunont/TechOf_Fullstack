@@ -1,0 +1,18 @@
+
+div {
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+
+/*
+    djksahdhsadhashd
+*/
+
+p {
+    border-style: dotted;
+    border-top-width: 2px;
+    border-right-width: 20px;
+    border-bottom-width: 6px;
+    border-left-width: 15px;
+}
