@@ -1,0 +1,13 @@
+
+
+#myDiv {
+    background-color: violet;
+    width:50%;
+    min-width: 200px;
+    height: 500px;
+}
+
+#secondDiv {
+    background-color: green;
+    max-height: 50%;
+}

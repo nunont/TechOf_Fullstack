@@ -1,0 +1,26 @@
+
+
+a:link {
+    color: green;
+    font-size: 64px;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    font-family: 'Noto Sans Miao', sans-serif;
+
+    font-size: 100px;
+    color: pink;
+}
+
+div {
+    padding: 100px;
+    background-color: red;
+}
+
+div:hover {
+    background-color: green;
+}

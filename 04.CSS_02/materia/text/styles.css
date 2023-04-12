@@ -1,0 +1,42 @@
+
+
+
+.container {
+    font-size: 64px;
+}
+
+.through {
+    text-decoration: line-through;
+}
+
+.over  {
+    text-decoration: overline;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.up {
+    text-transform: uppercase;
+}
+
+.low {
+    text-transform: lowercase;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.just {
+    text-align: justify;
+}
