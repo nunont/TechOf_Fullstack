@@ -1,0 +1,123 @@
+.square {
+    width: 100px;
+    height: 100px;
+}
+
+.a {
+    background-color: olive;
+}
+
+.static-b {
+    position: static;
+    top: 30px;
+    left: 60px;
+    background-color: brown;
+}
+
+.relative-b {
+    position: relative;
+    top: 30px;
+    left: 60px;
+    background-color: blueviolet;
+}
+
+.fixed-b {
+    position: fixed;
+    top: 0px;
+    left: 200px;
+    background-color: bisque;
+}
+
+.absolute-b {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    background-color: orange;
+}
+
+.sticky-b {
+    position: sticky;
+    top: 400px;
+    left: 500px;
+    background-color: aqua;
+}
+
+.overlaap {
+    width: 400px;
+    height: 400px;
+}
+
+.overlaap img {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+}
+
+.inline * {
+    display: inline;
+}
+
+.none * {
+    display: none;
+}
+
+.hidden * {
+    visibility: hidden;
+}
+
+.horizontal-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: red;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.horizontal-nav li {
+    float: left;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.horizontal-nav li a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.horizontal-nav li a:hover {
+    color: white;
+    
+}
+
+.vertical-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: red;
+    overflow: hidden;
+    padding: 5px;
+    width: 100px;
+}
+
+.vertical-nav li {
+    margin-bottom: 10px;
+}
+
+.vertical-nav li:hover {
+    background-color: blueviolet;
+}
+
+.vertical-nav li a {
+    display: block;
+}
+
+.vertical-nav li a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.vertical-nav li a:hover {
+    color: white;
+}
