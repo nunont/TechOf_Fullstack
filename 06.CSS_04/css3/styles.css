@@ -1,0 +1,112 @@
+
+div {
+    width: 400px;
+    height: 200px;
+}
+
+.grad-one {
+    background-image: linear-gradient(to right, green, blue);
+}
+
+.grad-two {
+    background-image: linear-gradient(to top left, orange, yellow);
+}
+
+.grad-three {
+    background-image: linear-gradient(70deg, red, violet);
+}
+
+h1 {
+    text-shadow: 2px 2px red;
+}
+
+.shadow-div {
+    background-color: red;
+    box-shadow: 10px 10px black;
+}
+
+.scale-x {
+    background-color: blue;
+    transform: scaleX(2);
+}
+
+.scale-y {
+    background-color: greenyellow;
+    transform: scaleY(2);
+}
+
+.scale {
+    background-color: brown;
+    transform: scale(2,1);
+}
+
+.translate {
+    background-color: darkgreen;
+    transform: translate(100px, 00px);
+}
+
+.rotate {
+    background-color: darkred;
+    transform: rotate(60deg);
+}
+
+.trans-one {
+    background-color: red;
+    position: relative;
+    transition: top 1s, left 2s;
+}
+
+.trans-one:hover {
+   top:100px;
+    left: 178px;
+}
+
+.anim-one {
+    animation-name: myAnim;
+    animation-duration: 5s;
+    animation-iteration-count: 10;
+}
+
+@keyframes myAnim {
+    from {background-color: blueviolet;}
+    to {background-color: orange;}
+}
+
+.anim-two {
+    animation-name: secondAnim;
+    animation-duration: 3s;
+    position: relative;
+    background-color: blue;
+    animation-iteration-count: 10;
+}
+
+@keyframes secondAnim {
+    0% {
+        background-color: blue;
+        left: 0px;
+        top: 0px;
+    }
+
+    30% {
+        background-color: orangered;
+        left: 200px;
+        top: 0px;
+    }
+
+    60% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    80% {
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: orangered;
+        left: 0px;
+        top: 0px;
+    }
+}

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hNav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.hNav li {
+    float: left;
+    padding-right: 10px;
+    display: block;
+    text-align: center;
+}
+
+.hNav li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.hNav li a:hover {
+    background-color: black;
+    color: white;
+}
+
+.hNav .option-right{
+    float: right;
+}
+
+.vNav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: brown;
+    width: 25%;
+    position: sticky;
+    left: 0;
+    top: 20px;
+}
+
+.vNav li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.vNav li a:hover {
+    color: white;
+    background-color: darkslateblue;
+}

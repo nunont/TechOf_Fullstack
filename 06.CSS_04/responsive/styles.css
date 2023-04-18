@@ -1,0 +1,23 @@
+.container {
+    background-color: darkgoldenrod;
+    height: 400px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        height: 50px;
+    }
+}

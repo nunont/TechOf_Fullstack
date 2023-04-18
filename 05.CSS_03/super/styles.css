@@ -1,0 +1,22 @@
+
+
+.container {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background-color: red;
+}
+
+.center {
+    background-color: green;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.right {
+    background-color: green;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}

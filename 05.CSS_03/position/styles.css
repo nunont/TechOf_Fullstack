@@ -1,0 +1,70 @@
+
+.square {
+    width: 200px;
+    height: 200px;
+}
+
+#base {
+    background-color: red;
+}
+
+#static {
+    position: static;
+    background-color: orange;
+}
+
+#relative {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    background-color: rgb(14, 214, 214);
+}
+
+#fixed {
+    position: fixed;
+    top: 40px;
+    left: 400px;
+    background-color: rgb(7, 150, 83);
+}
+
+#absolute {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    background-color: rgb(168, 197, 5);
+}
+
+#sticky {
+    position: sticky;
+    top: 600px;
+    left: 400px;
+    background-color: rgb(206, 16, 16);
+}
+
+.overlap {
+    position: relative;
+    width: 600px;
+    height: 500px;
+}
+
+.overlap img {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+
+    z-index: -1;
+}
+.overlap h1 {
+    position: relative;
+    color: white;
+    top: 50%;
+    text-align: center;
+}
+
+.overlap  h2 {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    right: 0px;
+}
+

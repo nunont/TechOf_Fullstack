@@ -1,0 +1,15 @@
+
+div {
+    background-color: aquamarine;
+    width: 50%;
+    height: 400px;
+    text-align: center;
+    border: solid 1px blue;
+    margin: auto;
+}
+
+p {
+    vertical-align: middle;
+    height: 100%;
+    line-height: 400px;
+}
