@@ -1,0 +1,211 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section {
+}
+
+#first {
+    background-image: linear-gradient(90deg, rgb(95, 7, 76), rgb(224, 0, 253));
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100vh;
+}
+
+#nav {
+    padding-top: 5%;
+}
+
+#nav a {
+    text-decoration: none;
+    color: rgb(211, 210, 210);
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#nav a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+#main-content {
+    margin-top: 5%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+#left-content {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#left-content img{
+    width: 100%;
+}
+
+#right-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 3%;
+}
+
+#right-content p {
+    font-size: 54px;
+    margin: 0;
+    color: antiquewhite;
+    text-transform: uppercase;
+}
+
+#line-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    gap: 5%;
+}
+
+#line-buttons a {
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 2px rgb(238, 6, 161);
+    color: rgb(238, 6, 161);
+    padding: 3%;
+    border-radius: 30px;
+}
+
+#line-buttons a:hover {
+    background-image: linear-gradient(90deg, rgb(238, 6, 161),rgb(250, 163, 32));
+    color: white;
+    font-weight: bold;
+}
+
+#message-help {
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    z-index: 99;
+    width: 100px;
+}
+
+#message-help img{
+    width: 100%;
+}
+
+#message-help:hover {
+    width: 150px;
+}
+
+#second {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+#info-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 5%;
+}
+
+.info-section-title  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-section-title h1 {
+    margin: auto;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.info-section-title div {
+    width: 10%;
+    padding: 10px;
+    border-bottom: solid rgb(238, 6, 161) 3px;
+}
+
+#info-section p {
+    margin: 0;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#tracks-section {
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.track-main {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.track-main h3 {
+    text-align: center;
+    color: rgb(238, 6, 161);
+    font-weight: normal;
+}
+
+.track-main h3, .track-main p {
+    margin: 0;
+}
+
+.track-main img {
+    width: 100%;
+    height: 200px;
+    border-radius: 100%;
+}
+
+#third {
+    background-image: linear-gradient(0, rgb(84, 3, 104),whitesmoke);
+}
+
+.robots-imgs {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    box-orient: horizontal;
+    box-pack: center;
+    justify-content: space-between;
+    box-align: center;  
+    align-items: center;
+    gap: 5%;
+}
+
+.img-cell img {
+    display: flex;
+    width: 100%;
+}
+
+
+
