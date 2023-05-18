@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myMonitor" class="monitor">
+        <div id="myScreen" class="screen">
+
+        </div>
+        <div class="bar">
+            <button id="myButton" class="toggle" onclick="togleMonitor()"></button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function Monitor(isOn, width, height){
+            this.isOn = isOn;
+            this.width = width;
+            this.height = height;
+            
+            this.turnOnOFf = function() {
+                this.isOn = !this.isOn;
+
+                if(this.isOn){
+                    document.getElementById("myScreen").style.backgroundColor = "green";
+                    document.getElementById("myButton").style.backgroundColor = "green";
+
+                }
+                else {
+                    document.getElementById("myScreen").style.backgroundColor = "black";
+                    document.getElementById("myButton").style.backgroundColor = "red";
+                }
+                
+            }
+        }
+
+        var myMonitor = new Monitor(false, 800, 600);
+
+        document.getElementById("myMonitor").style.width = myMonitor.width + "px";
+        document.getElementById("myMonitor").style.height = myMonitor.height + "px";
+
+
+        function togleMonitor(){
+            myMonitor.turnOnOFf();
+        }
+
+    </script>
+    
+</body>
+</html>

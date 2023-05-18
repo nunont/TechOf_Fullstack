@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="iName" placeholder="O teu Nome">
+        <button onclick="displayName()">Clica</button>
+
+        <input type="number" id="iNumberA" placeholder="Insere um numero">
+        <input type="number" id="iNumberB" placeholder="Insere um numero">
+        <button onclick="soma()">Soma</button>
+        <button onclick="mult()">Multiplicação</button>
+
+
+    <script>
+        
+        function displayName() {
+            var valueName = document.getElementById("iName").value;
+            console.log("O meu nome é " + valueName + "!😎😊😉😉")
+        }
+
+        function soma(){
+            var numberA = document.getElementById("iNumberA").value;
+            var numberB = document.getElementById("iNumberB").value;
+
+            var result = parseInt(numberA) + parseInt(numberB);
+            console.log(result);
+            return result;
+        }
+
+        function mult(){
+            var numberA = document.getElementById("iNumberA").value;
+            var numberB = document.getElementById("iNumberB").value;
+
+            var result = parseInt(numberA) * parseInt(numberB);
+            console.log(result);
+            return result;
+        }
+
+
+        var s = soma(123, 2);
+        console.log(s)
+
+    </script>
+
+</body>
+</html>

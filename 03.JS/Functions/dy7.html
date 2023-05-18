@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Do it yourself 6</h1>
+    <button onclick="handleCLick()">Clica ME!</button>
+
+    <p id="max"></p>
+    <script>
+
+        function handleCLick() {
+            var arr = [1,6,2,9,123,543,3224,654,213,676,31,4,21,65]
+            var numb = parseInt(prompt("Insira:"))
+
+            var numberExists = numberInArray(arr, numb);
+
+            document.getElementById("max").innerText = numberExists;
+        }
+
+        function numberInArray(arr, nr)  {
+
+            for (let i = 0; i < arr.length; i++){
+                if (arr[i] == nr) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
+
+    </script>
+    
+</body>
+</html>

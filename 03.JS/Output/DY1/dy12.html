@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="reset()">Reset</button>
+    <button onclick="enlarge()">Click</button>
+    <p id="details"></p>
+
+    <script>
+        var clicks = 0;
+
+        function reset(){
+            document.getElementById("details").style.backgroundColor = "yellow";
+            document.getElementById("details").style.width = "10px";
+            document.getElementById("details").innerHTML = document.getElementById("details").style.width;
+        }
+
+        function enlarge() {
+            var width = document.getElementById("details").style.width;
+            var widthValue = parseInt(width);
+
+            clicks++;
+
+            widthValue += 10;
+            document.getElementById("details").style.width = widthValue + "px";
+            document.getElementById("details").innerHTML = clicks;
+
+            if (widthValue > 500){
+                document.body.style.backgroundColor = "brown";
+            }
+            else {
+                document.body.style.backgroundColor = "blue";
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="enlarge()">Click Me</button>
+    <button onclick="reset()">Reset</button>
+
+    <p id="details">Ola</p>
+
+    <script>
+
+        function enlarge()
+        {
+            console.log("enlarge");
+
+            var currentWidth = document.getElementById("details").style.width;
+            console.log(currentWidth)
+            console.log(typeof(currentWidth))
+
+            var currentWidthNumber = parseInt(currentWidth);
+            console.log(currentWidthNumber)
+            console.log(typeof(currentWidthNumber))
+
+            var newWidth = currentWidthNumber + 10;
+            console.log(newWidth);
+
+            document.getElementById("details").style.width = newWidth + "px";
+        }
+
+        function reset(){
+            console.log("reset")
+            document.getElementById("details").style.backgroundColor = "red";
+            document.getElementById("details").style.width = "10px";
+        }
+
+    </script>
+
+</body>
+</html>
