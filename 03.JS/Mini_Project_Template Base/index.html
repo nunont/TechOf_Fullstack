@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>Guess the letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="backGroundBody">
+    <h1>With which letter does it start</h1>
+    <h1 class="countQuestion">Question number 1</h1>
+
+    <div class="imgGuess">
+        <img id="imgToGuess" src="images/hat.png">
+    </div>
+    
+    <div class="input">
+        <input type="text" id="input">
+        <button class="btn play">Play</button>
+    </div>
+    
+    <div class="output">
+        <h2 class="message">correct number</h2>
+        <h2 class="score">score : 0</h2>
+        <h2 class="highscore">🍭 high score : 0</h2>
+    </div>
+    
+    <div class="playAgain hidden">
+        <button>Game over-lets play again</button>
+    </div>
+</body>
+
+<script>
+
+    var arr = ["images/hat.png", "images/boat.png", "images/short.png"];
+    var arrWord = ["hat", "boat" ,"shirt"];
+
+    var counter = 0;
+
+    var i = selectRandomImage();
+
+    var score = 0;
+    var highScore = 0;
+
+    document.body.classList.add('backGroundBody');
+
+    let btnPlayAgain = document.querySelector('.playAgain'); 
+
+    btnPlayAgain.addEventListener('click', function(){
+        document.body.classList.add('backGroundBody');
+        counter = 0
+        i = selectRandomImage();// get new random picture
+        score = 0
+        document.getElementById("input").value="";
+        hiddenbtnPlayAgain();
+    })
+    
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function selectRandomImage(){
+        document.querySelector(".countQuestion").innerText = "Question number " + counter;
+
+        let index = getRandomInt(3);
+        let imgText = arr[index];
+
+        document.getElementById("imgToGuess").src = imgText;
+
+        return index;
+    }
+
+    function play(){
+        counter++;
+
+        if (counter <= 3) {
+            let word = arrWord[i];
+            let letter = document.getElementById("input").value;
+
+            if (!letter) {
+                document.querySelector(".message").innerText = "No Letter 🥵";
+                score = score - 2;
+            }
+            else if (letter == word[0]) {
+                document.querySelector(".message").innerText = "correct Answer 🤙";
+                score += 5;
+            }
+            else if (letter != word[0]) {
+                document.querySelector(".message").innerText = "not correct Answer 👎";
+                score -= 2;
+            }
+
+            document.querySelector(".score").innerText = "score: " + score;
+
+            if (counter < 3) {
+                i = selectRandomImage();
+            }
+        }
+        
+        if (counter > 2) {
+            gameOver();
+        }
+    }
+
+    document.querySelector(".play").addEventListener('click', play);
+
+    const showbtnPlayAgain = function () {
+        btnPlayAgain.classList.remove('hidden');
+    };
+
+    const hiddenbtnPlayAgain = function () {
+        btnPlayAgain.classList.add('hidden');
+    };
+
+    function gameOver(){
+
+        if (score > highScore) {
+            highScore = score;
+            document.querySelector(".highscore").innerText = "🍭 high score " + score;
+            showbtnPlayAgain();
+        }
+
+        document.body.classList.remove('backGroundBody');
+    }
+
+</script>
+
+</html>

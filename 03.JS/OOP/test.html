@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    function Person(first, last, age, gender, interests) {
+  this.name =  {
+    first : first,
+    last : last
+  };
+  
+  this.age = age;
+  this.gender = gender;
+  this.interests = interests;
+};
+
+var me = new Person('Nuno', 'Marques', 24, 'Male', ['Beer', 'Padel'])
+console.log(Person.prototype)
+</script>
+</html>

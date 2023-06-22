@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <input type="number" id="numberInput">
+            <button id="randomNumber">Random</button>
+            <button id="sortArray">Sort</button>
+        </div>
+        <p>Array: <b id="numbersArray"></b></p>
+        <p>Sort: <b id="arraySorted"></b></p>
+
+        <div id="steps">
+
+        </div>
+    </div>
+</body>
+<script>
+
+    const numberInput = document.getElementById('numberInput');
+    const randomNumber = document.getElementById('randomNumber');
+    const sortArray = document.getElementById('sortArray');
+    const numbersArray = document.getElementById('numbersArray');
+    const arraySorted = document.getElementById('arraySorted');
+    const steps = document.getElementById('steps');
+
+    let array = [];
+
+    numberInput.addEventListener('keypress', (event) => {
+        if (event.keyCode === 13) {
+            array.push(numberInput.value);
+            numbersArray.innerHTML = array ;
+            numberInput.value = '';
+            callSorted();
+        }
+    });
+
+    randomNumber.addEventListener('click', () => {
+        let randomNumber = 0;
+        if (numberInput.value != '') {
+            for (let i = 0; i < numberInput.value; i++) {
+                randomNumber = Math.floor(Math.random() * 100000);
+                array.push(randomNumber);
+            }
+        }
+        else {
+            randomNumber = Math.floor(Math.random() * 100000);
+            array.push(randomNumber);
+        }
+
+        numbersArray.innerHTML = array;
+        numberInput.value = '';
+        callSorted();
+    });
+
+    sortArray.addEventListener('click', () => {
+        callSorted();
+    });
+
+    let callSorted = async () => {
+        let sorted =  bubleSortPromise(array)
+        .then((result) => {
+            arraySorted.innerHTML = result;
+        })
+        
+    }
+
+    function bubleSortPromise(arr) {
+        return new Promise((resolve, reject) => {
+            resolve(bubleSort(arr));
+        });
+    }
+
+    function bubleSort(enter) {
+        let length = enter.length;
+        let ordered = enter;
+
+        for (let i = 0; i < length; i++) {
+            for (let j = 0; j < (length - i - 1); j++) {
+                let p = document.createElement('p');
+                p.innerHTML = `Comparing ${ordered[j]} and ${ordered[j + 1]}`;
+                
+                if (ordered[j] > ordered[j + 1]) {
+                    let tmp = ordered[j];
+                    ordered[j] = ordered[j + 1];
+                    ordered[j + 1] = tmp;
+                    p.innerHTML += ` - Swapping ${ordered[j]} and ${ordered[j + 1]}`;
+                }
+                
+                steps.appendChild(p);
+            }
+        }
+        
+        return ordered
+    }
+
+    
+
+</script>
+</html>

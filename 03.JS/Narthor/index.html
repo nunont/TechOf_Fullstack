@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <div>
+            <h1>Checklist app</h1>
+            <h2>Keep track of your daily tasks!</h2>
+        </div>
+
+        <div id="instructions">
+            <div id="inst_header">
+                <h1>How does it work?</h1>
+                <button onclick="instTogle()">Show/Hide</button>
+            </div>
+            
+            <div id="instDetail">
+                <ul>
+                    <li>Enter your task on the Tasks Input square</li>
+                    <li>Press "Add Task" to add it on a List below</li>
+                    <li>You can check your tasks as Completed by clicking on them</li>
+                    <li>If you wish to delete a task from your List, press the "X" button at the end of it</li>
+                    <li>You can also store your list with a Custom Name! After adding all of your tasks, enter a name on the
+                        List Name Input square and press the "Save List" button to keep it!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="taks">
+            <div id="tasksHeader">
+                <div class="taskH">
+                    <input type="text" name="" id="taskName">
+                    <button onclick="addTask()">Add Task</button>
+                </div>
+                <div class="taskH">
+                    <input type="text" name="" id="taskList">
+                    <button onclick="addList()">Add List</button>
+                </div>
+            </div>
+            <div  id="tasksCenas">
+                <ul id="taksList">
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var counter = 0;
+        function instTogle(){
+
+            let value = document.getElementById("instDetail").style.display;
+            if (value == "none") {
+                document.getElementById("instDetail").style.display = "flex";
+            }
+            else {
+                document.getElementById("instDetail").style.display = "none";
+
+            }
+        }
+
+        function addTask(){
+            let value = document.getElementById("taskName").value;
+
+            if (value != "") {
+                counter++;
+                var newTask = document.createElement("li");
+                newTask.innerText = value;
+                newTask.setAttribute("onclick", "setTask(" + counter + ")");
+                newTask.setAttribute("id", "task-" + counter);
+                document.getElementById("taksList").appendChild(newTask);
+
+            }
+
+            document.getElementById("taskName").value = "";
+        }
+
+        function setTask(nr) {
+            let li = document.getElementById("task-" + nr);
+
+            if (li.style.color != "red") {
+                li.style.color = "red";
+            }
+            else {
+                li.parentNode.removeChild(li)
+            }
+
+            
+        }
+
+        function addList() {
+            let listName = document.getElementById("taskList").value;
+        
+            if (listName == "") {
+                return;
+            }
+
+            var ul = document.createElement("ul")
+            var h = document.createElement("h1")
+            h.innerText = listName;
+            ul.appendChild(h)
+            
+            var list = document.querySelectorAll("#taksList li");
+
+            for(let i = 0; i < list.length; i++) {
+                let li = list[i];
+                ul.appendChild(li);
+            }
+
+            document.getElementById("tasksCenas").appendChild(ul)
+
+            document.getElementById("taskList").value = "";
+        }
+    </script>
+</body>
+
+</html>

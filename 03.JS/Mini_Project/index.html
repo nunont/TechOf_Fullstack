@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Guess the letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="backGroundBody">
+    <h1>With which letter does it start</h1>
+    <h1 class="countQuestion">Question number 1</h1>
+    <div class="imgGuess">
+        <img id="imgToGuess" src="images/hat.png">
+    </div>
+    <div class="input">
+        <input type="text" id="input">
+        <button class="btn play">Play</button>
+    </div>
+    <div class="output">
+        <h2 class="message">correct number</h2>
+        <h2 class="score">score : 0</h2>
+        <h2 class="highscore">🍭 high score : 0</h2>
+    </div>
+    <div class="playAgain hidden">
+        <button>Game over-lets play again</button>
+    </div>
+</body>
+
+<script>
+    var arr = ["images/hat.png", "images/boat.png", "images/short.png"];
+    var arrWord = ["hat", "boat", "short"];
+    var counter = 0;
+    var i = selectRandomImage();
+    var score = 0;
+    var highScore = 0;
+    
+    document.body.classList.add('backGroundBody');
+    let btnPlayAgain = document.querySelector('.playAgain');
+
+    function selectRandomImage() {
+        document.querySelector(".countQuestion").textContent = "Question number " + counter
+        let index = Math.floor(Math.random() * 10 % 3);
+        console.log(index);
+        document.getElementById("imgToGuess").src = arr[index];
+        return index;
+    }
+
+    function play() {
+        counter++;
+        if (counter <= 3) {
+            let word = arrWord[i];
+            var letter = document.getElementById("input").value;
+            //var imgLetter = document.getElementById("imgToGuess").na
+            if (!letter) {
+                document.querySelector(".message").textContent = "No Letter 🥵"
+                score -= 2;
+            }
+            else if (letter == word[0]) {
+                document.querySelector(".message").textContent = "correct Answer 🤙"
+                score += 5;
+            }
+            else if (letter != word[0]) {
+                document.querySelector(".message").textContent = "correct Answer 👎"
+                score -= 2;
+            }
+            document.getElementById("input").value = "";
+            document.querySelector(".score").textContent = "score : " + score;
+            if (counter < 3) {
+                i = selectRandomImage();
+            }
+        }
+        if (counter > 2) {
+        }
+    }
+    //event listener
+    document.querySelector(".play").addEventListener('click', play);
+
+</script>
+
+</html>
