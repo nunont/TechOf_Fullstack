@@ -1,0 +1,11 @@
+
+<div>
+  <h2>{{ title }}</h2>
+  <h2 [ngClass]="counter >= 0 ? 'positive' : 'negative'">{{ counter }}</h2>
+  
+  <span>
+    <button (click)="decrement()">-</button>
+    <button (click)="increment()">+</button>
+  </span>
+  
+</div>

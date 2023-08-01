@@ -1,0 +1,6 @@
+
+{{ title }}
+
+<app-product-list (selectProduct)="selectProductAppComponent($event)"></app-product-list>
+<app-product-detail [selectedProduct]="selectedProduct"></app-product-detail>
+<app-product-edit [selectedProduct]="selectedProduct"></app-product-edit>

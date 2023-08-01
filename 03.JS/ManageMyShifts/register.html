@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiter</title>
+    <link rel="stylesheet" href="css/accountStyles.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="acc-card">
+            <div class="card-title">
+                <h1>Register</h1>
+                <p id="error"></p>
+            </div>
+            <div class="card-content">
+                <div class="card-input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="card-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="card-input">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password" placeholder="password">
+                </div>
+                <div class="card-input">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+                </div>
+                <div class="card-input">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Lastname">
+                </div>
+                <div class="card-input">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Age" min="18" max="65">
+                </div>
+                <div class="card-section">
+                    <button type="submit" id="register">Register</button>
+                    <a href="login.php">Already have an account?</a>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-section">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

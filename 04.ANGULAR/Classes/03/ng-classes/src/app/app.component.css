@@ -1,0 +1,17 @@
+
+
+.important {
+    color: red;
+    text-decoration: solid underline;
+    font-weight: bold;
+}
+
+.super {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.warning {
+    color: orange;
+    text-decoration: solid underline;
+}

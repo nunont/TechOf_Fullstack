@@ -1,0 +1,15 @@
+
+<img src="../assets/images/slb-logo-new.svg" width="100">
+<h1>My Garage</h1>
+
+<ul>
+  <ng-container *ngFor="let car of cars; let i = index" > 
+    <li *ngIf="car.maxSpeed >= 350"> {{ i + 230 }} - {{ car.brand }}, {{ car.topCar }}, {{ car.maxSpeed }} kms</li> 
+  </ng-container>
+</ul>
+
+<ng-container *ngFor="let car of cars; let i = index" [ngSwitch]="car.brand">
+  <p *ngSwitchCase="'Ferrari'" style="color: red;">{{ car.topCar }}</p>
+  <p *ngSwitchCase="'Lamborghini'" style="color: green;">{{ car.topCar }}</p>
+  <p *ngSwitchCase="'Bugatti'" style="color: purple;">{{ car.topCar }}</p>
+</ng-container>
