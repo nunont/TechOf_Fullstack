@@ -7,6 +7,9 @@ import { ProductDetailComponent } from './Components/product-detail/product-deta
 import { ProductAddComponent } from './Components/product-add/product-add.component';
 import { ProductEditComponent } from './Components/product-edit/product-edit.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

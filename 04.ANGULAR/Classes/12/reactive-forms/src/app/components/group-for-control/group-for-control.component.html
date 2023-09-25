@@ -1,0 +1,27 @@
+<p>group-for-control works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+    <label for="firstName">Firstname</label>
+    <input type="text" id="firstName" formControlName="firstName">
+
+    <label for="lastName">Lastname</label>
+    <input type="text" id="lastName" formControlName="lastName">
+
+    <div formGroupName="address">
+        <label for="street">Street</label>
+        <input type="text" id="street" formControlName="street">
+
+        <label for="city">City</label>
+        <input type="text" id="city" formControlName="city">
+
+        <label for="state">State</label>
+        <input type="text" id="state" formControlName="state">
+
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" formControlName="zip">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<button (click)="updateProfile()">Update Profile</button>

@@ -1,6 +1,0 @@
-
-<ul>
-  <li *ngFor="let person of people" (click)="selectPerson(person)">{{ person }}</li>
-</ul>
-
-<app-input-output [name]="selectedName" (deleteRequest)="crossOffPerson($event)"></app-input-output>

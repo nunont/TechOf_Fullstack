@@ -1,0 +1,10 @@
+
+
+<input type="text"    [formControl]="name" />
+<p>Value: {{ name.value }}</p>
+
+<button (click)="updateName()">Update Name</button>
+
+<app-group-for-control></app-group-for-control>
+
+<app-group-for-control-builder></app-group-for-control-builder>

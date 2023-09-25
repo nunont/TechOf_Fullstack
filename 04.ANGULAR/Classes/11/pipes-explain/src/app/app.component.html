@@ -1,0 +1,15 @@
+
+
+<h1>{{ title }}</h1>
+<h1>{{ title | reverse }}</h1>
+
+<h1>{{ "Raul" }}</h1>
+<h1>{{ "Raul" | reverse:" pxx"}}</h1>
+
+
+<input type="text" [(ngModel)]="sopas">
+<p>{{ sopas | reverse}}</p>
+
+
+<input type="text" [(ngModel)]="email">
+<p>{{ email | emailValid}}</p>

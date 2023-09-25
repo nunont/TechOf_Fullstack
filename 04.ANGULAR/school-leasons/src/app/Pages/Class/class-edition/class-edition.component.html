@@ -1,0 +1,59 @@
+
+
+<div class="container">
+    <h2>Class Creation</h2>
+    <form [formGroup]="classForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col">
+                <label for="name"  class="form-label">Name</label>
+                <input class="form-control" type="text" id="name" formControlName="name">
+            </div>
+            <div class="col">
+                <label for="description" class="form-label">Description</label>
+                <input class="form-control" type="text" id="description" formControlName="description">
+            </div>
+        </div>
+
+        <div class="my-3 " formArrayName="students">
+
+            <button class="btn btn-primary" type="button" (click)="addStudent()">Add Student</button>
+
+            <div *ngFor="let student of students.controls; let i = index">
+                
+                <div class="my-3" [formGroupName] = "i">
+                    <div class="row">
+                        <div class="col-8">
+                            <label for="name-{{i}}"  class="form-labe
+                            l">Name</label>
+                            <input class="form-control" type="text" id="name-{{i}}" formControlName="name">    
+                        </div>
+                        <div class="col">
+                            <label for="age-{{i}}"  class="form-label">Age</label>
+                        <input class="form-control" type="text" id="age-{{i}}" formControlName="age">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="email-{{i}}"  class="form-label">Email</label>
+                            <input class="form-control" type="text" id="email-{{i}}" formControlName="email">    
+                        </div>
+                        <div class="col">
+                            <label for="phone-{{i}}"  class="form-label">Phone</label>
+                            <input class="form-control" type="text" id="phone-{{i}}" formControlName="phone">    
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="photo-{{i}}"  class="form-label">Photo</label>
+                        <input class="form-control" type="text" id="photo-{{i}}" formControlName="photo">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success" type="submit">Create / Save</button>
+        </div>
+    </form>
+</div>

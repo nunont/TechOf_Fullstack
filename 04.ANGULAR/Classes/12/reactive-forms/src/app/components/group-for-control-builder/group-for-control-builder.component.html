@@ -1,0 +1,33 @@
+<p>group-for-control-builder works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+    <label for="firstName">Firstname</label>
+    <input type="text" id="firstName" formControlName="firstName">
+
+    <label for="lastName">Lastname</label>
+    <input type="text" id="lastName" formControlName="lastName">
+
+    <div formGroupName="address">
+        <label for="street">Street</label>
+        <input type="text" id="street" formControlName="street">
+
+        <label for="city">City</label>
+        <input type="text" id="city" formControlName="city">
+
+        <label for="state">State</label>
+        <input type="text" id="state" formControlName="state">
+
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" formControlName="zip">
+    </div>
+
+    <div formArrayName="aliases">
+        <button (click)="addAlias()">Add Alias</button>
+        <div *ngFor="let alias of aliases.controls; let i = index">
+            <label for="alias-{{ i }}">Alias</label>
+            <input type="text" id="alias-{{ i }}" [formControlName]="i">
+        </div>
+    </div>
+    
+
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
