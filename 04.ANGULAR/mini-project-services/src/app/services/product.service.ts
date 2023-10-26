@@ -14,6 +14,7 @@ export class ProductService {
   getProducts(): Observable<Product[]> { 
     let products = of(PRODUCTS)
     return products;
+    //Novas cenas
   }
 
 }
