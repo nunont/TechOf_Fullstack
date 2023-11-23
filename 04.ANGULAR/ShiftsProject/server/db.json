@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "birthDate": "1990-01-01",
+      "email": "jj@g.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "firstName": "Nuno",
+      "lastName": "Marques",
+      "birthDate": "2023-10-04",
+      "email": "nuno.marques.098@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 2
+    }
+  ]
+}

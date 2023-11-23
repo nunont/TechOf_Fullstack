@@ -1,0 +1,40 @@
+
+#main{
+    width: 100vw;
+    height: 100vh;
+}
+
+#content {
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

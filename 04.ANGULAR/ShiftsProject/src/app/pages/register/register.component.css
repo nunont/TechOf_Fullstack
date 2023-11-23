@@ -1,0 +1,10 @@
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.half {
+    border-color: RED;
+    width: 50%;
+}
