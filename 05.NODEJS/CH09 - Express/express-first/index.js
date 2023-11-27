@@ -13,14 +13,18 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
+let homeRequest = (req, res) => {
     res.status(200);
     res.send('Hello World!');
-});
+}
 
-app.get('/api', (req, res) => {
+app.get('/', homeRequest);
+
+
+let apiRequest = (req, res) => {
     res.send('Hello API!');
-});
+}
+app.get('/api', );
 
 
 let students = [
@@ -42,12 +46,13 @@ app.get('/api/students', (req, res) => {
     res.send(students);
 });
 
-app.get('/api/students/:id', (req, res) => {
+let sopas = (req, res) => {
     var studentId = req.params.id;
 
     var student = students.find(student => student.id == studentId);
     res.json(student);
-});
+};
+app.get('/api/students/:id', sopas)
 
 app.get('/api/students/:id/:name', (req, res) => {
     var studentId = req.params.id;
@@ -61,5 +66,7 @@ app.post('/api', (req, res) => {
     let body = req.body;
     res.send(body);
 });
+
+app.put
 
 app.listen(port)
