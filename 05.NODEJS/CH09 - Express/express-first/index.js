@@ -3,6 +3,19 @@ const express = require('express');
 var bodyParser = require('body-parser')
 
 
+let students = [
+    {
+        id: 1,
+        name: 'John Doe',
+        age: 23
+    },
+    {
+        id: 2,
+        name: 'Jane Doe',
+        age: 24
+    }
+];
+
 var app = express();
 var port = 3000;
 
@@ -18,55 +31,42 @@ let homeRequest = (req, res) => {
     res.send('Hello World!');
 }
 
-app.get('/', homeRequest);
-
-
 let apiRequest = (req, res) => {
     res.send('Hello API!');
 }
-app.get('/api', );
 
-
-let students = [
-    {
-        id: 1,
-        name: 'John Doe',
-        age: 23
-    },
-    {
-        id: 2,
-        name: 'Jane Doe',
-        age: 24
-    }
-];
-
-app.get('/api/students', (req, res) => {
-    
-
+let getStudents = (req, res) => {
     res.send(students);
-});
+}
 
-let sopas = (req, res) => {
+
+let getStudentById = (req, res) => {
     var studentId = req.params.id;
 
     var student = students.find(student => student.id == studentId);
     res.json(student);
 };
-app.get('/api/students/:id', sopas)
 
-app.get('/api/students/:id/:name', (req, res) => {
+let getStudentByIdAndName = (req, res) => {
     var studentId = req.params.id;
     var studentName = req.params.name;
 
     var student = students.find(student => student.id == studentId && student.name == studentName);
     res.json(student);
-});
+}
 
-app.post('/api', (req, res) => {
+let postAPI = (req, res) => {
     let body = req.body;
     res.send(body);
-});
+}
 
-app.put
+app.get('/', homeRequest);
+app.get('/api', apiRequest);
+
+app.get('/api/students', getStudents);
+app.get('/api/students/:id', getStudentById)
+app.get('/api/students/:id/:name', getStudentByIdAndName);
+
+app.post('/api', postAPI);
 
 app.listen(port)
