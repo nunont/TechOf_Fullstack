@@ -35,7 +35,7 @@ async function run() {
     await createMessage("656e3b592c2aa986aa66e72c", newMessage);
 }
 
-getAllRooms = async ()=> {
+exports.getAllRooms = async ()=> {
     try {
         await client.connect();
         const database = client.db("Fullstack");
@@ -136,4 +136,4 @@ createMessage = async (roomId, message) => {
     }
 }
 
-run().catch(console.dir);
+//run().catch(console.dir);
